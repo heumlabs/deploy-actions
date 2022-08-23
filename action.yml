@@ -1,0 +1,20 @@
+# action.yml
+name: 'Hello World2'
+description: 'Greet someone and record the time'
+inputs:
+  numOctocats:
+    description: 'Number of Octocats'
+    required: true
+    default: '1'
+  octocatEyeColor:
+    description: 'Eye color of the Octocats'
+    required: true
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.numOctocats }}
+    - ${{ inputs.octocatEyeColor }}
