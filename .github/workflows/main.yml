@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello2
-        uses: actions/hello-world-docker-action@v1
+        uses: heumlabs/deploy-actions@v1
         with:
           numOctocats: 'Mona the Octocat'
           octocatEyeColor: '1234'
