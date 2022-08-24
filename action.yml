@@ -1,13 +1,14 @@
 # action.yml
-name: 'Hello World2'
-description: 'Greet someone and record the time'
+name: 'deploy dashboard'
+description: '배포 자동화 및 이력 관리'
 inputs:
   repo:
     description: 'github repository ex: (heumlabs/blahblah)'
     required: true
   branch:
-    description: '현재 origin 에 push 한 배포용 브랜치명'
+    description: 'release branch 명'
     required: true
+    default: ${GITHUB_REF##*/}
   title:
     description: '슬랙 공지용 메시지 title'
     required: true

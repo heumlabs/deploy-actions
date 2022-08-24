@@ -8,8 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: deploy action
-        uses: heumlabs/deploy-actions@v10
+        uses: heumlabs/deploy-actions@v1
         with:
           repo: heumlabs/deploy-actions
-          branch: release
           title: r2m
