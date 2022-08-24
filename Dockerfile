@@ -2,9 +2,7 @@
 FROM python:3.10
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
-COPY . /code
-
-WORKDIR /code
+COPY . .
 
 RUN pip install -r requirement.txt
 
