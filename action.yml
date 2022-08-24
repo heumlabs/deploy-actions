@@ -3,12 +3,11 @@ name: 'deploy dashboard'
 description: '배포 자동화 및 이력 관리'
 inputs:
   repo:
-    description: 'github repository ex: (heumlabs/blahblah)'
+    description: 'github repository ex: heumlabs/blahblah'
     required: true
   branch:
-    description: 'release branch 명'
+    description: 'release branch 명. 현재 브랜치를 가져오고 싶다면 ${GITHUB_REF##*/}'
     required: true
-    default: ${GITHUB_REF##*/}
   title:
     description: '슬랙 공지용 메시지 title'
     required: true

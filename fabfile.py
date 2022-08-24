@@ -9,4 +9,4 @@ def create_r2m(ctx, repo, branch, title):
     })
     print(repo, branch, title)
     print(response.ok)
-    print(response.json())
+    print(response.content)
