@@ -1,12 +1,15 @@
-on: [push]
+on:
+  push:
+    branches:
+      - release
 
 jobs:
-  hello_world_job2:
+  release:
     runs-on: ubuntu-latest
     steps:
       - name: deploy action
         id: hello2
-        uses: heumlabs/deploy-actions@v9
+        uses: heumlabs/deploy-actions@v10
         with:
           repo: heumlabs/deploy-actions
           branch: release
