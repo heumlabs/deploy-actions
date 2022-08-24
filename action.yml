@@ -2,19 +2,19 @@
 name: 'Hello World2'
 description: 'Greet someone and record the time'
 inputs:
-  numOctocats:
-    description: 'Number of Octocats'
+  repo:
+    description: 'github repository ex: (heumlabs/blahblah)'
     required: true
-    default: '1'
-  octocatEyeColor:
-    description: 'Eye color of the Octocats'
+  branch:
+    description: '현재 origin 에 push 한 배포용 브랜치명'
     required: true
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  title:
+    description: '슬랙 공지용 메시지 title'
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.numOctocats }}
-    - ${{ inputs.octocatEyeColor }}
+    - ${{ inputs.repo }}
+    - ${{ inputs.branch }}
+    - ${{ inputs.title }}

@@ -1,4 +1,3 @@
 #!/bin/sh -l
 
-res=$(python deploy.py $1 $2)
-echo "::set-output name=time::$res"
+fab create_r2m -r $1 -b $2 -t $3
