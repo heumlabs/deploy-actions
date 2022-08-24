@@ -6,7 +6,10 @@ inputs:
     description: 'github repository ex: heumlabs/blahblah'
     required: true
   branch:
-    description: 'release branch 명. 현재 브랜치를 가져오고 싶다면 ${GITHUB_REF##*/}'
+    description: 'release branch 명 ex: release,'
+    required: true
+  target:
+    description: 'pull request 에서 머지될 base branch 명 ex: main, staging..'
     required: true
   title:
     description: '슬랙 공지용 메시지 title'
@@ -17,4 +20,5 @@ runs:
   args:
     - ${{ inputs.repo }}
     - ${{ inputs.branch }}
+    - ${{ inputs.target }}
     - ${{ inputs.title }}

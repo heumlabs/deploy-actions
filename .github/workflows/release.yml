@@ -11,5 +11,5 @@ jobs:
         uses: heumlabs/deploy-actions@v1
         with:
           repo: heumlabs/deploy-actions
-          branch: ${GITHUB_REF##*/}
+          branch: main
           title: r2m
