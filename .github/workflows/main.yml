@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: deploy action
         id: hello2
-        uses: heumlabs/deploy-actions@v4
+        uses: heumlabs/deploy-actions@v5
         with:
           repo: heumlabs/deploy-actions
           branch: release
