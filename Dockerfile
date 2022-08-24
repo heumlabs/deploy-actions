@@ -9,4 +9,4 @@ WORKDIR /code
 RUN pip install -r requirement.txt
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
-ENTRYPOINT ["/code/entrypoint.sh"]
+ENTRYPOINT ["./entrypoint.sh"]
