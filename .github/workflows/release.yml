@@ -11,6 +11,4 @@ jobs:
         uses: heumlabs/deploy-actions@v1
         with:
           repo: heumlabs/deploy-actions
-          branch: release
-          target: main
-          title: r2m
+          title: deploy-action 배포내역 알림
