@@ -7,10 +7,10 @@ inputs:
     required: true
   branch:
     description: 'release branch 명 ex: release,'
-    required: true
+    required: false
   target:
     description: 'pull request 에서 머지될 base branch 명 ex: main, staging..'
-    required: true
+    required: false
   title:
     description: '슬랙 공지용 메시지 title'
     required: true
