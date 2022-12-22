@@ -1,0 +1,17 @@
+# action.yml
+name: 'post deploy'
+description: '배포 자동화 및 이력 관리'
+inputs:
+  repo:
+    description: 'github repository ex: heumlabs/blahblah'
+    required: true
+  sha:
+    description: 'release branch 명 ex: release,'
+    required: false
+    default: release
+runs:
+  using: 'docker'
+  image: './Dockerfile'
+  args:
+    - ${{ inputs.repo }}
+    - ${{ inputs.sha }}
