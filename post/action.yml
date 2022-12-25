@@ -6,7 +6,7 @@ inputs:
     description: 'github repository ex: heumlabs/blahblah'
     required: true
   sha:
-    description: 'release branch 명 ex: release,'
+    description: '현재 branch 의 sha'
     required: false
     default: release
 runs:
